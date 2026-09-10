@@ -184,3 +184,121 @@ pontosAnatomia.forEach(function (ponto) {
     });
 
 });
+/* =====================================
+   BIOLOGIA INTERATIVA
+===================================== */
+
+const botoesBiologia =
+    document.querySelectorAll(".bio-botao");
+
+const bioTitulo =
+    document.querySelector("#bioTitulo");
+
+const bioDescricao =
+    document.querySelector("#bioDescricao");
+
+const bioSimbolo =
+    document.querySelector("#bioSimbolo");
+
+
+const dadosBiologia = {
+
+    alimentacao: {
+
+        titulo: "Alimentação",
+
+        descricao:
+            "A alimentação varia entre as espécies. Muitas estrelas-do-mar consomem moluscos e outros invertebrados. Algumas conseguem projetar parte do estômago para fora do corpo durante a digestão.",
+
+        simbolo: "◉"
+    },
+
+    locomocao: {
+
+        titulo: "Locomoção",
+
+        descricao:
+            "Centenas de pés ambulacrais podem atuar de forma coordenada para permitir que a estrela-do-mar se desloque sobre rochas, areia e outras superfícies.",
+
+        simbolo: "≋"
+    },
+
+    hidrovascular: {
+
+        titulo: "Sistema hidrovascular",
+
+        descricao:
+            "O sistema hidrovascular é formado por canais internos preenchidos por fluido. Ele está diretamente relacionado ao funcionamento dos pés ambulacrais.",
+
+        simbolo: "◌"
+    },
+
+    reproducao: {
+
+        titulo: "Reprodução",
+
+        descricao:
+            "Em muitas espécies, machos e fêmeas liberam gametas na água, onde ocorre a fecundação. Algumas estrelas-do-mar também apresentam formas de reprodução assexuada.",
+
+        simbolo: "✦"
+    },
+
+    percepcao: {
+
+        titulo: "Percepção do ambiente",
+
+        descricao:
+            "Estrelas-do-mar não possuem um cérebro centralizado. Seu sistema nervoso inclui um anel nervoso e nervos que se estendem pelos braços. Algumas também apresentam estruturas sensíveis à luz nas extremidades dos braços.",
+
+        simbolo: "◎"
+    },
+
+    regeneracao: {
+
+        titulo: "Regeneração",
+
+        descricao:
+            "Muitas estrelas-do-mar conseguem regenerar partes perdidas dos braços. A extensão dessa capacidade depende da espécie e da quantidade de tecido preservado.",
+
+        simbolo: "↻"
+    }
+
+};
+
+
+botoesBiologia.forEach(function (botao) {
+
+    botao.addEventListener("click", function () {
+
+        const tema =
+            botao.dataset.bio;
+
+        const informacao =
+            dadosBiologia[tema];
+
+
+        if (!informacao) {
+            return;
+        }
+
+
+        bioTitulo.textContent =
+            informacao.titulo;
+
+        bioDescricao.textContent =
+            informacao.descricao;
+
+        bioSimbolo.textContent =
+            informacao.simbolo;
+
+
+        document
+            .querySelector(".bio-detalhe")
+            .scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
+    });
+
+});
