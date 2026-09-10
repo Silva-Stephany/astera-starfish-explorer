@@ -4,16 +4,95 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const botaoExplorar = document.querySelector(".botao");
 
-    botaoExplorar.addEventListener("click", function (event) {
+    if (botaoExplorar) {
 
-        event.preventDefault();
+        botaoExplorar.addEventListener("click", function (event) {
 
-        const secao = document.querySelector("#descobrir");
+            event.preventDefault();
 
-        secao.scrollIntoView({
-            behavior: "smooth"
+            const secao = document.querySelector("#descobrir");
+
+            secao.scrollIntoView({
+                behavior: "smooth"
+            });
+
         });
 
-    });
+    }
+
+
+    const campoBusca = document.querySelector("#busca");
+
+    const filtroHabitat =
+        document.querySelector("#filtroHabitat");
+
+    const especies =
+        document.querySelectorAll(".especie-card");
+
+
+    function filtrarEspecies() {
+
+        const texto =
+            campoBusca
+                ? campoBusca.value.toLowerCase()
+                : "";
+
+        const habitat =
+            filtroHabitat
+                ? filtroHabitat.value
+                : "todos";
+
+
+        especies.forEach(function (especie) {
+
+            const conteudo =
+                especie.innerText.toLowerCase();
+
+            const habitatEspecie =
+                especie.dataset.habitat;
+
+
+            const correspondeBusca =
+                conteudo.includes(texto);
+
+            const correspondeHabitat =
+                habitat === "todos"
+                ||
+                habitat === habitatEspecie;
+
+
+            if (
+                correspondeBusca
+                &&
+                correspondeHabitat
+            ) {
+
+                especie.style.display = "flex";
+
+            } else {
+
+                especie.style.display = "none";
+
+            }
+
+        });
+
+    }
+
+
+    if (campoBusca) {
+        campoBusca.addEventListener(
+            "input",
+            filtrarEspecies
+        );
+    }
+
+
+    if (filtroHabitat) {
+        filtroHabitat.addEventListener(
+            "change",
+            filtrarEspecies
+        );
+    }
 
 });
