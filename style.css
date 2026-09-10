@@ -1165,3 +1165,218 @@ footer h3 {
     }
 
 }
+/* ==============================
+   PÁGINA ANATOMIA
+================================ */
+
+.anatomia-interativa {
+    max-width: 1150px;
+    margin: 0 auto 130px;
+    padding: 30px;
+
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.anatomia-visual {
+    min-height: 550px;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 30px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(87, 176, 209, 0.18),
+            rgba(17, 23, 55, 0.75)
+        );
+
+    border:
+        1px solid rgba(111, 194, 235, 0.18);
+}
+
+.estrela-anatomia {
+    font-size: 360px;
+
+    color: #bd78cf;
+
+    transform: rotate(15deg);
+
+    text-shadow:
+        0 0 35px rgba(196, 105, 210, 0.4),
+        0 0 80px rgba(91, 201, 255, 0.2);
+}
+
+.ponto-anatomia {
+    position: absolute;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    border:
+        2px solid rgba(255,255,255,0.8);
+
+    background: #7959d8;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 20px rgba(137, 94, 255, 0.8);
+
+    transition: 0.3s;
+}
+
+.ponto-anatomia:hover {
+    transform: scale(1.2);
+
+    background: #a26be5;
+}
+
+.ponto-1 {
+    top: 15%;
+    left: 48%;
+}
+
+.ponto-2 {
+    top: 43%;
+    left: 58%;
+}
+
+.ponto-3 {
+    top: 52%;
+    left: 46%;
+}
+
+.ponto-4 {
+    bottom: 18%;
+    left: 30%;
+}
+
+.painel-anatomia {
+    padding: 45px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(16, 68, 92, 0.55),
+            rgba(22, 16, 53, 0.75)
+        );
+
+    border:
+        1px solid rgba(127, 193, 235, 0.18);
+}
+
+.painel-anatomia h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 38px;
+
+    margin-bottom: 20px;
+}
+
+.painel-anatomia > p {
+    color: #8da6ba;
+
+    line-height: 1.8;
+}
+
+.curiosidade-anatomia {
+    margin-top: 35px;
+
+    padding: 20px;
+
+    display: flex;
+
+    gap: 15px;
+
+    border-radius: 15px;
+
+    background:
+        rgba(120, 80, 191, 0.13);
+
+    border:
+        1px solid rgba(171, 112, 238, 0.16);
+}
+
+.curiosidade-anatomia span {
+    color: #b78cff;
+}
+
+.curiosidade-anatomia p {
+    color: #9baec0;
+
+    line-height: 1.6;
+
+    font-size: 13px;
+}
+
+
+/* ESTRUTURAS */
+
+.estruturas {
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding: 30px 35px 140px;
+
+    text-align: center;
+}
+
+.estruturas h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 48px;
+
+    font-weight: 500;
+}
+
+.anatomia-cards {
+    margin-top: 60px;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+
+    .anatomia-interativa {
+        grid-template-columns: 1fr;
+    }
+
+    .estrela-anatomia {
+        font-size: 280px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .anatomia-visual {
+        min-height: 400px;
+    }
+
+    .estrela-anatomia {
+        font-size: 220px;
+    }
+
+    .painel-anatomia {
+        padding: 30px;
+    }
+
+}
