@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mapa Oceânico | ASTERA</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="cabecalho">
+
+    <div class="logo">
+        <span>✦</span>
+        ASTERA
+    </div>
+
+    <nav class="menu">
+        <a href="index.html">Início</a>
+        <a href="especies.html">Espécies</a>
+        <a href="mapa.html" class="ativo">Mapa Oceânico</a>
+        <a href="anatomia.html">Anatomia</a>
+        <a href="habitats.html">Habitats</a>
+        <a href="biologia.html">Biologia</a>
+        <a href="#">Dados</a>
+        <a href="#">Conservação</a>
+        <a href="#">Sobre</a>
+    </nav>
+
+</header>
+
+
+<main>
+
+    <section class="pagina-topo">
+
+        <p class="categoria">
+            DISTRIBUIÇÃO GLOBAL
+        </p>
+
+        <h1>
+            Mapa Oceânico
+        </h1>
+
+        <p>
+            Explore diferentes regiões do planeta e descubra
+            algumas estrelas-do-mar associadas a esses ambientes.
+        </p>
+
+    </section>
+
+
+    <section class="mapa-secao">
+
+        <div class="mapa-container">
+
+            <div class="oceano-texto oceano-pacifico">
+                PACÍFICO
+            </div>
+
+            <div class="oceano-texto oceano-atlantico">
+                ATLÂNTICO
+            </div>
+
+            <div class="oceano-texto oceano-indico">
+                ÍNDICO
+            </div>
+
+
+            <button
+                class="marcador marcador-1"
+                data-regiao="pacifico-norte">
+                ★
+            </button>
+
+            <button
+                class="marcador marcador-2"
+                data-regiao="caribe">
+                ★
+            </button>
+
+            <button
+                class="marcador marcador-3"
+                data-regiao="indopacifico">
+                ★
+            </button>
+
+            <button
+                class="marcador marcador-4"
+                data-regiao="atlantico-sul">
+                ★
+            </button>
+
+            <button
+                class="marcador marcador-5"
+                data-regiao="pacifico-sul">
+                ★
+            </button>
+
+        </div>
+
+
+        <div class="mapa-painel">
+
+            <p class="categoria">
+                REGIÃO SELECIONADA
+            </p>
+
+            <h2 id="mapaTitulo">
+                Escolha um ponto no mapa
+            </h2>
+
+            <p id="mapaDescricao">
+                Clique em uma das estrelas do mapa para descobrir
+                informações sobre aquela região.
+            </p>
+
+            <div class="mapa-info">
+
+                <div>
+                    <strong>Espécie</strong>
+                    <span id="mapaEspecie">—</span>
+                </div>
+
+                <div>
+                    <strong>Habitat</strong>
+                    <span id="mapaHabitat">—</span>
+                </div>
+
+                <div>
+                    <strong>Região</strong>
+                    <span id="mapaRegiao">—</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="regioes-oceanicas">
+
+        <p class="categoria">
+            OCEANOS
+        </p>
+
+        <h2>
+            Estrelas-do-mar ao redor do mundo
+        </h2>
+
+        <div class="regioes-grid">
+
+            <article class="regiao-card">
+
+                <span>🌊</span>
+
+                <h3>Oceano Pacífico</h3>
+
+                <p>
+                    Abriga uma enorme variedade de ambientes marinhos,
+                    desde águas tropicais até regiões frias do norte.
+                </p>
+
+            </article>
+
+
+            <article class="regiao-card">
+
+                <span>🌎</span>
+
+                <h3>Oceano Atlântico</h3>
+
+                <p>
+                    Possui habitats costeiros, recifes, fundos arenosos
+                    e regiões profundas com grande diversidade.
+                </p>
+
+            </article>
+
+
+            <article class="regiao-card">
+
+                <span>≋</span>
+
+                <h3>Oceano Índico</h3>
+
+                <p>
+                    Região associada a recifes tropicais e a diferentes
+                    espécies de estrelas-do-mar.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <section class="destaque">
+
+        <div>
+
+            <p class="categoria">
+                DISTRIBUIÇÃO
+            </p>
+
+            <h2>
+                Presentes em todos os oceanos
+            </h2>
+
+            <p>
+                As estrelas-do-mar são animais exclusivamente marinhos
+                e podem ser encontradas desde águas costeiras rasas
+                até ambientes profundos.
+            </p>
+
+        </div>
+
+        <div class="estrela-grande">
+            ★
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div>
+        <h3>✦ ASTERA</h3>
+        <p>Explorador de Estrelas-do-Mar</p>
+    </div>
+
+    <p>
+        Explorando a vida marinha ao redor do planeta.
+    </p>
+
+    <p>
+        Criado por Stephany Gonçalves da Silva
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
