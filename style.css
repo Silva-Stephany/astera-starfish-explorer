@@ -2282,3 +2282,16 @@ footer h3 {
     }
 
 }
+.marcador.selecionado {
+    transform: scale(1.25);
+
+    background:
+        linear-gradient(
+            145deg,
+            #73dcff,
+            #9868ee
+        );
+
+    box-shadow:
+        0 0 40px rgba(112, 215, 255, 0.9);
+}
