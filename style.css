@@ -1380,3 +1380,222 @@ footer h3 {
     }
 
 }
+/* ==============================
+   PÁGINA HABITATS
+================================ */
+
+.habitats-grid {
+    max-width: 1150px;
+    margin: 0 auto 120px;
+    padding: 0 30px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 28px;
+}
+
+.habitat-card {
+    min-height: 340px;
+
+    padding: 40px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(19, 71, 96, 0.55),
+            rgba(18, 16, 49, 0.78)
+        );
+
+    border:
+        1px solid rgba(111, 192, 235, 0.17);
+
+    transition: 0.35s;
+}
+
+.habitat-card:hover {
+    transform: translateY(-8px);
+
+    border-color:
+        rgba(172, 117, 255, 0.45);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.habitat-icone {
+    font-size: 50px;
+
+    margin-bottom: 25px;
+}
+
+.habitat-card h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 32px;
+
+    margin-bottom: 18px;
+}
+
+.habitat-card > p:not(.categoria) {
+    color: #8da6ba;
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+}
+
+.habitat-dados {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+.habitat-dados span {
+    padding: 8px 14px;
+
+    border-radius: 30px;
+
+    font-size: 11px;
+
+    color: #b894ff;
+
+    background:
+        rgba(123, 84, 190, 0.13);
+
+    border:
+        1px solid rgba(163, 108, 229, 0.15);
+}
+
+.habitat-profundo {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(7, 39, 67, 0.75),
+            rgba(22, 9, 47, 0.9)
+        );
+}
+
+
+/* PROFUNDIDADE */
+
+.zona-oceanica {
+    max-width: 1150px;
+
+    margin: 0 auto 130px;
+
+    padding: 60px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1.1fr;
+
+    gap: 60px;
+
+    align-items: center;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(12, 55, 82, 0.6),
+            rgba(14, 13, 39, 0.82)
+        );
+
+    border:
+        1px solid rgba(111, 191, 235, 0.15);
+}
+
+.zona-texto h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 42px;
+
+    margin-bottom: 20px;
+}
+
+.zona-texto > p:last-child {
+    color: #8aa3b8;
+
+    line-height: 1.8;
+}
+
+.profundidade {
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    border:
+        1px solid rgba(114, 183, 225, 0.18);
+}
+
+.nivel {
+    min-height: 105px;
+
+    padding: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.06);
+}
+
+.nivel:last-child {
+    border-bottom: none;
+}
+
+.nivel strong {
+    font-size: 18px;
+
+    margin-bottom: 5px;
+}
+
+.nivel span {
+    color: #8ca4b8;
+
+    font-size: 13px;
+}
+
+.nivel-1 {
+    background: rgba(40, 141, 178, 0.22);
+}
+
+.nivel-2 {
+    background: rgba(24, 90, 139, 0.27);
+}
+
+.nivel-3 {
+    background: rgba(29, 55, 110, 0.32);
+}
+
+.nivel-4 {
+    background: rgba(42, 23, 84, 0.42);
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 850px) {
+
+    .habitats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .zona-oceanica {
+        grid-template-columns: 1fr;
+
+        margin-left: 20px;
+        margin-right: 20px;
+
+        padding: 40px 30px;
+    }
+
+}
