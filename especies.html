@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Espécies | ASTERA</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="cabecalho">
+
+        <div class="logo">
+            <span>✦</span>
+            ASTERA
+        </div>
+
+        <nav class="menu">
+            <a href="index.html">Início</a>
+            <a href="especies.html" class="ativo">Espécies</a>
+            <a href="#">Mapa Oceânico</a>
+            <a href="#">Anatomia</a>
+            <a href="#">Habitats</a>
+            <a href="#">Biologia</a>
+            <a href="#">Dados</a>
+            <a href="#">Conservação</a>
+            <a href="#">Sobre</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="pagina-topo">
+
+            <p class="categoria">
+                BIODIVERSIDADE
+            </p>
+
+            <h1>
+                Espécies de Estrelas-do-Mar
+            </h1>
+
+            <p>
+                Conheça algumas das espécies mais fascinantes
+                encontradas nos oceanos do planeta.
+            </p>
+
+        </section>
+
+
+        <section class="filtros">
+
+            <input
+                type="text"
+                id="busca"
+                placeholder="Buscar espécie..."
+            >
+
+            <select id="filtroHabitat">
+
+                <option value="todos">
+                    Todos os habitats
+                </option>
+
+                <option value="recife">
+                    Recifes
+                </option>
+
+                <option value="rochoso">
+                    Fundo rochoso
+                </option>
+
+                <option value="profundo">
+                    Águas profundas
+                </option>
+
+                <option value="arenoso">
+                    Fundo arenoso
+                </option>
+
+            </select>
+
+        </section>
+
+
+        <section class="lista-especies">
+
+
+            <article class="especie-card" data-habitat="recife">
+
+                <div class="especie-imagem">
+                    ★
+                </div>
+
+                <div class="especie-conteudo">
+
+                    <span class="tag">
+                        Recife
+                    </span>
+
+                    <h2>
+                        Estrela-coroa-de-espinhos
+                    </h2>
+
+                    <p class="nome-cientifico">
+                        Acanthaster planci
+                    </p>
+
+                    <p>
+                        Espécie tropical conhecida por possuir muitos braços
+                        cobertos por espinhos e por se alimentar de corais.
+                    </p>
+
+                    <div class="dados-especie">
+
+                        <div>
+                            <strong>Região</strong>
+                            <span>Indo-Pacífico</span>
+                        </div>
+
+                        <div>
+                            <strong>Tamanho</strong>
+                            <span>Até 80 cm</span>
+                        </div>
+
+                        <div>
+                            <strong>Alimentação</strong>
+                            <span>Corais</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="especie-card" data-habitat="rochoso">
+
+                <div class="especie-imagem">
+                    ★
+                </div>
+
+                <div class="especie-conteudo">
+
+                    <span class="tag">
+                        Fundo rochoso
+                    </span>
+
+                    <h2>
+                        Estrela-do-mar-girassol
+                    </h2>
+
+                    <p class="nome-cientifico">
+                        Pycnopodia helianthoides
+                    </p>
+
+                    <p>
+                        Uma das maiores estrelas-do-mar conhecidas,
+                        podendo possuir mais de vinte braços.
+                    </p>
+
+                    <div class="dados-especie">
+
+                        <div>
+                            <strong>Região</strong>
+                            <span>Pacífico Norte</span>
+                        </div>
+
+                        <div>
+                            <strong>Tamanho</strong>
+                            <span>Até 1 metro</span>
+                        </div>
+
+                        <div>
+                            <strong>Alimentação</strong>
+                            <span>Moluscos e ouriços</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="especie-card" data-habitat="arenoso">
+
+                <div class="especie-imagem">
+                    ★
+                </div>
+
+                <div class="especie-conteudo">
+
+                    <span class="tag">
+                        Fundo arenoso
+                    </span>
+
+                    <h2>
+                        Estrela-de-areia
+                    </h2>
+
+                    <p class="nome-cientifico">
+                        Astropecten articulatus
+                    </p>
+
+                    <p>
+                        Espécie encontrada em regiões de areia e cascalho,
+                        geralmente parcialmente enterrada no substrato.
+                    </p>
+
+                    <div class="dados-especie">
+
+                        <div>
+                            <strong>Região</strong>
+                            <span>Atlântico Ocidental</span>
+                        </div>
+
+                        <div>
+                            <strong>Tamanho</strong>
+                            <span>Até 20 cm</span>
+                        </div>
+
+                        <div>
+                            <strong>Alimentação</strong>
+                            <span>Pequenos moluscos</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="especie-card" data-habitat="profundo">
+
+                <div class="especie-imagem">
+                    ★
+                </div>
+
+                <div class="especie-conteudo">
+
+                    <span class="tag">
+                        Águas profundas
+                    </span>
+
+                    <h2>
+                        Estrela-brisingida
+                    </h2>
+
+                    <p class="nome-cientifico">
+                        Brisinga endecacnemos
+                    </p>
+
+                    <p>
+                        Estrela-do-mar de águas profundas, com braços
+                        longos e delicados adaptados à captura de alimento.
+                    </p>
+
+                    <div class="dados-especie">
+
+                        <div>
+                            <strong>Habitat</strong>
+                            <span>Águas profundas</span>
+                        </div>
+
+                        <div>
+                            <strong>Formato</strong>
+                            <span>Braços longos</span>
+                        </div>
+
+                        <div>
+                            <strong>Alimentação</strong>
+                            <span>Partículas e pequenos animais</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div>
+            <h3>✦ ASTERA</h3>
+            <p>Explorador de Estrelas-do-Mar</p>
+        </div>
+
+        <p>
+            Biodiversidade marinha em destaque.
+        </p>
+
+        <p>
+            Criado por Stephany Gonçalves da Silva
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
