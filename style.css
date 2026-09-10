@@ -946,3 +946,222 @@ footer h3 {
         gap: 25px;
     }
 }
+/* ==============================
+   PÁGINA ESPÉCIES
+================================ */
+
+.pagina-topo {
+    padding: 160px 8% 80px;
+    text-align: center;
+}
+
+.pagina-topo h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 52px;
+    margin-bottom: 20px;
+}
+
+.pagina-topo > p:last-child {
+    max-width: 650px;
+    margin: auto;
+    color: #8da6ba;
+    line-height: 1.8;
+}
+
+.filtros {
+    max-width: 1100px;
+    margin: 0 auto 45px;
+    display: flex;
+    gap: 20px;
+    padding: 0 30px;
+}
+
+.filtros input,
+.filtros select {
+    flex: 1;
+    padding: 15px 18px;
+
+    border-radius: 12px;
+
+    border:
+        1px solid rgba(123, 194, 235, 0.20);
+
+    background:
+        rgba(8, 30, 52, 0.75);
+
+    color: white;
+
+    outline: none;
+}
+
+.filtros input::placeholder {
+    color: #72899d;
+}
+
+.lista-especies {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 0 30px 130px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.especie-card {
+    display: flex;
+
+    overflow: hidden;
+
+    min-height: 300px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(16, 65, 90, 0.55),
+            rgba(16, 17, 45, 0.75)
+        );
+
+    border:
+        1px solid rgba(118, 189, 235, 0.16);
+
+    transition: 0.35s;
+}
+
+.especie-card:hover {
+    transform: translateY(-7px);
+
+    border-color:
+        rgba(172, 115, 255, 0.45);
+}
+
+.especie-imagem {
+    width: 35%;
+
+    min-width: 150px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 100px;
+
+    color: #bc7fd3;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(143, 82, 192, 0.30),
+            rgba(25, 85, 112, 0.18)
+        );
+}
+
+.especie-conteudo {
+    padding: 28px;
+}
+
+.tag {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    padding: 6px 12px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(137, 91, 218, 0.15);
+
+    color: #bf99ff;
+
+    font-size: 11px;
+}
+
+.especie-conteudo h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 24px;
+
+    margin-bottom: 6px;
+}
+
+.nome-cientifico {
+    font-style: italic;
+
+    color: #7bcce9;
+
+    margin-bottom: 18px;
+}
+
+.especie-conteudo > p {
+    color: #8ba2b4;
+
+    line-height: 1.7;
+
+    font-size: 14px;
+}
+
+.dados-especie {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+.dados-especie strong {
+    display: block;
+
+    font-size: 11px;
+
+    color: #b38cf7;
+
+    margin-bottom: 4px;
+}
+
+.dados-especie span {
+    color: #8298aa;
+
+    font-size: 11px;
+}
+
+@media (max-width: 850px) {
+
+    .lista-especies {
+        grid-template-columns: 1fr;
+    }
+
+    .filtros {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .especie-card {
+        flex-direction: column;
+    }
+
+    .especie-imagem {
+        width: 100%;
+        height: 180px;
+    }
+
+    .dados-especie {
+        grid-template-columns: 1fr;
+    }
+
+}
