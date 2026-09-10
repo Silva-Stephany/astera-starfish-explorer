@@ -1599,3 +1599,300 @@ footer h3 {
     }
 
 }
+/* ==============================
+   PÁGINA BIOLOGIA
+================================ */
+
+.bio-introducao {
+    max-width: 1100px;
+    margin: 0 auto 120px;
+    padding: 60px;
+
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 60px;
+    align-items: center;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(13, 66, 91, 0.62),
+            rgba(28, 16, 64, 0.78)
+        );
+
+    border:
+        1px solid rgba(116, 194, 236, 0.16);
+}
+
+.bio-introducao-texto h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 42px;
+    font-weight: 500;
+
+    margin-bottom: 25px;
+}
+
+.bio-introducao-texto > p:not(.categoria) {
+    color: #8da5b8;
+
+    line-height: 1.85;
+
+    margin-bottom: 18px;
+}
+
+.bio-estrela {
+    text-align: center;
+
+    font-size: 230px;
+
+    color: #bd78cf;
+
+    transform: rotate(15deg);
+
+    text-shadow:
+        0 0 35px rgba(192, 103, 207, 0.45),
+        0 0 80px rgba(80, 197, 255, 0.20);
+}
+
+
+/* SEÇÃO PRINCIPAL */
+
+.bio-secao {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 20px 30px 120px;
+
+    text-align: center;
+}
+
+.bio-secao > h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 46px;
+
+    font-weight: 500;
+
+    margin-bottom: 60px;
+}
+
+.bio-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 24px;
+}
+
+.bio-card {
+    min-height: 330px;
+
+    padding: 35px;
+
+    text-align: left;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(15, 65, 91, 0.5),
+            rgba(18, 15, 48, 0.75)
+        );
+
+    border:
+        1px solid rgba(113, 192, 235, 0.16);
+
+    transition: 0.35s;
+}
+
+.bio-card:hover {
+    transform: translateY(-8px);
+
+    border-color:
+        rgba(174, 115, 255, 0.45);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.30);
+}
+
+.bio-icone {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 16px;
+
+    margin-bottom: 25px;
+
+    font-size: 29px;
+
+    color: #bd92ff;
+
+    background:
+        rgba(131, 87, 205, 0.14);
+}
+
+.bio-card h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 25px;
+
+    margin-bottom: 15px;
+}
+
+.bio-card p {
+    min-height: 115px;
+
+    color: #819bad;
+
+    font-size: 14px;
+
+    line-height: 1.75;
+}
+
+.bio-botao {
+    margin-top: 20px;
+
+    padding: 10px 18px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    color: #c7a4ff;
+
+    background:
+        rgba(130, 83, 198, 0.15);
+
+    border:
+        1px solid rgba(171, 113, 232, 0.20);
+
+    transition: 0.3s;
+}
+
+.bio-botao:hover {
+    color: white;
+
+    background:
+        rgba(133, 82, 211, 0.45);
+}
+
+
+/* PAINEL */
+
+.bio-detalhe {
+    max-width: 1050px;
+
+    min-height: 270px;
+
+    margin: 0 auto 130px;
+
+    padding: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 50px;
+
+    border-radius: 28px;
+
+    background:
+        radial-gradient(
+            circle at 85% 50%,
+            rgba(159, 85, 211, 0.20),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            rgba(10, 61, 86, 0.7),
+            rgba(25, 13, 58, 0.82)
+        );
+
+    border:
+        1px solid rgba(138, 106, 218, 0.22);
+}
+
+.bio-detalhe > div:first-child {
+    max-width: 700px;
+}
+
+.bio-detalhe h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 37px;
+
+    margin-bottom: 18px;
+}
+
+.bio-detalhe p:not(.categoria) {
+    color: #8fa6b9;
+
+    line-height: 1.8;
+}
+
+.bio-detalhe-simbolo {
+    font-size: 100px;
+
+    color: #bd83df;
+
+    text-shadow:
+        0 0 30px rgba(188, 107, 218, 0.45);
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+
+    .bio-introducao {
+        grid-template-columns: 1fr;
+
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .bio-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .bio-introducao {
+        padding: 35px;
+    }
+
+    .bio-estrela {
+        font-size: 170px;
+    }
+
+    .bio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bio-detalhe {
+        margin-left: 20px;
+        margin-right: 20px;
+
+        padding: 35px;
+
+        flex-direction: column;
+    }
+
+}
