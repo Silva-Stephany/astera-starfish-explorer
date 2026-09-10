@@ -302,3 +302,161 @@ botoesBiologia.forEach(function (botao) {
     });
 
 });
+/* =====================================
+   MAPA OCEÂNICO INTERATIVO
+===================================== */
+
+const marcadoresMapa =
+    document.querySelectorAll(".marcador");
+
+const mapaTitulo =
+    document.querySelector("#mapaTitulo");
+
+const mapaDescricao =
+    document.querySelector("#mapaDescricao");
+
+const mapaEspecie =
+    document.querySelector("#mapaEspecie");
+
+const mapaHabitat =
+    document.querySelector("#mapaHabitat");
+
+const mapaRegiao =
+    document.querySelector("#mapaRegiao");
+
+
+const dadosMapa = {
+
+    "pacifico-norte": {
+
+        titulo: "Pacífico Norte",
+
+        descricao:
+            "Região de águas frias e temperadas que abriga diferentes espécies de estrelas-do-mar.",
+
+        especie:
+            "Estrela-do-mar-girassol",
+
+        habitat:
+            "Fundos rochosos e costeiros",
+
+        regiao:
+            "Costa do Pacífico Norte"
+    },
+
+
+    "caribe": {
+
+        titulo: "Mar do Caribe",
+
+        descricao:
+            "Região tropical com recifes, águas quentes e grande diversidade de organismos marinhos.",
+
+        especie:
+            "Estrela-de-areia",
+
+        habitat:
+            "Fundos arenosos e recifes",
+
+        regiao:
+            "Caribe e Atlântico tropical"
+    },
+
+
+    "indopacifico": {
+
+        titulo: "Indo-Pacífico",
+
+        descricao:
+            "Uma das regiões marinhas mais biodiversas do planeta, com extensas áreas de recifes de coral.",
+
+        especie:
+            "Estrela-coroa-de-espinhos",
+
+        habitat:
+            "Recifes de coral",
+
+        regiao:
+            "Oceano Índico e Pacífico tropical"
+    },
+
+
+    "atlantico-sul": {
+
+        titulo: "Atlântico Sul",
+
+        descricao:
+            "Abriga habitats tropicais e temperados, além de regiões profundas.",
+
+        especie:
+            "Diversas estrelas-do-mar",
+
+        habitat:
+            "Costas rochosas e fundos marinhos",
+
+        regiao:
+            "Atlântico Sul"
+    },
+
+
+    "pacifico-sul": {
+
+        titulo: "Pacífico Sul",
+
+        descricao:
+            "Região com ilhas, recifes, costas rochosas e ambientes de grande profundidade.",
+
+        especie:
+            "Diversas espécies",
+
+        habitat:
+            "Recifes e fundo marinho",
+
+        regiao:
+            "Pacífico Sul"
+    }
+
+};
+
+
+marcadoresMapa.forEach(function (marcador) {
+
+    marcador.addEventListener("click", function () {
+
+        const regiao =
+            marcador.dataset.regiao;
+
+        const informacao =
+            dadosMapa[regiao];
+
+
+        if (!informacao) {
+            return;
+        }
+
+
+        mapaTitulo.textContent =
+            informacao.titulo;
+
+        mapaDescricao.textContent =
+            informacao.descricao;
+
+        mapaEspecie.textContent =
+            informacao.especie;
+
+        mapaHabitat.textContent =
+            informacao.habitat;
+
+        mapaRegiao.textContent =
+            informacao.regiao;
+
+
+        marcadoresMapa.forEach(function (item) {
+            item.classList.remove("selecionado");
+        });
+
+        marcador.classList.add("selecionado");
+
+    });
+
+});
