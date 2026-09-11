@@ -2295,3 +2295,79 @@ footer h3 {
     box-shadow:
         0 0 40px rgba(112, 215, 255, 0.9);
 }
+/* ==============================
+   NOMES DOS CONTINENTES
+================================ */
+
+.continente {
+    position: absolute;
+
+    z-index: 3;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    color: rgba(230, 244, 250, 0.75);
+
+    text-shadow:
+        0 1px 5px rgba(0, 0, 0, 0.8);
+
+    pointer-events: none;
+}
+
+
+/* AMÉRICA DO NORTE */
+
+.continente-america-norte {
+    top: 25%;
+    left: 22%;
+}
+
+
+/* AMÉRICA DO SUL */
+
+.continente-america-sul {
+    top: 58%;
+    left: 34%;
+}
+
+
+/* EUROPA */
+
+.continente-europa {
+    top: 27%;
+    left: 51%;
+}
+
+
+/* ÁFRICA */
+
+.continente-africa {
+    top: 47%;
+    left: 53%;
+}
+
+
+/* ÁSIA */
+
+.continente-asia {
+    top: 29%;
+    left: 69%;
+}
+
+
+/* OCEANIA */
+
+.continente-oceania {
+    top: 67%;
+    left: 78%;
+}
+
+
+/* ANTÁRTIDA */
+
+.continente-antartida {
+    bottom: 7%;
+    left: 48%;
+}
