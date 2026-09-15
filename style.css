@@ -2478,3 +2478,46 @@ footer h3 {
     }
 
 }
+/* =========================================
+   POSIÇÃO FINAL DAS ESTRELAS DO MAPA
+   NÃO COLOCAR OUTRAS POSIÇÕES DEPOIS DESTA
+========================================= */
+
+/* 1 - PACÍFICO NORTE
+   Oceano, à esquerda da América do Norte */
+.mapa-real .marcador-1 {
+    top: 32% !important;
+    left: 7% !important;
+}
+
+
+/* 2 - CARIBE
+   Mar do Caribe */
+.mapa-real .marcador-2 {
+    top: 43% !important;
+    left: 29% !important;
+}
+
+
+/* 3 - INDO-PACÍFICO
+   Próximo da Indonésia */
+.mapa-real .marcador-3 {
+    top: 57% !important;
+    left: 87% !important;
+}
+
+
+/* 4 - ATLÂNTICO SUL
+   Entre América do Sul e África */
+.mapa-real .marcador-4 {
+    top: 69% !important;
+    left: 43% !important;
+}
+
+
+/* 5 - PACÍFICO SUL
+   À esquerda da América do Sul */
+.mapa-real .marcador-5 {
+    top: 72% !important;
+    left: 8% !important;
+}
