@@ -1984,21 +1984,16 @@ footer h3 {
 
     z-index: 5;
 
-    color: #ffffff;
-
-    font-size: 14px;
+    font-size: 11px;
 
     font-weight: 700;
 
-    line-height: 1.25;
+    letter-spacing: 0.5px;
 
-    letter-spacing: 0.8px;
-
-    text-align: center;
+    color: rgba(255,255,255,0.9);
 
     text-shadow:
-        0 2px 5px rgba(0,0,0,1),
-        0 0 10px rgba(0,0,0,0.75);
+        0 2px 6px rgba(0,0,0,0.95);
 
     pointer-events: none;
 }
@@ -2006,46 +2001,39 @@ footer h3 {
 
 .america-norte {
     top: 28%;
-    left: 16%;
+    left: 17%;
 }
-
 
 .america-sul {
-    top: 57%;
-    left: 27%;
+    top: 58%;
+    left: 28%;
 }
-
 
 .europa {
-    top: 28%;
+    top: 29%;
     left: 51%;
 }
-
 
 .africa {
-    top: 48%;
+    top: 49%;
     left: 51%;
 }
-
 
 .asia {
-    top: 31%;
-    left: 72%;
+    top: 32%;
+    left: 71%;
 }
-
 
 .oceania {
-    top: 66%;
-    left: 81%;
+    top: 67%;
+    left: 82%;
 }
 
-
 .antartida {
-    bottom: 6%;
-    left: 51%;
+    bottom: 5%;
+    left: 50%;
 
-    transform:
-        translateX(-50%);
+    transform: translateX(-50%);
 }
 
 
@@ -2056,50 +2044,34 @@ footer h3 {
 
     z-index: 5;
 
-    color: #62caff;
+    color: rgba(95, 203, 255, 0.85);
 
-    font-size: 13px;
+    font-size: 11px;
 
     font-weight: 600;
 
-    line-height: 1.5;
-
-    letter-spacing: 4px;
-
-    text-align: center;
+    letter-spacing: 3px;
 
     text-shadow:
-        0 2px 6px rgba(0,0,0,1),
-        0 0 14px rgba(0,0,0,0.9);
+        0 2px 8px rgba(0,0,0,1);
 
     pointer-events: none;
 }
 
 
 .pacifico-esquerda {
-    top: 50%;
-    left: 4%;
+    top: 51%;
+    left: 5%;
 }
 
 .atlantico {
-    top: 45%;
-    left: 37%;
+    top: 47%;
+    left: 38%;
 }
 
 .indico {
-    top: 61%;
+    top: 63%;
     left: 65%;
-}
-
-.pacifico-direita {
-    top: 50%;
-    right: 3%;
-}
-
-.oceanosul {
-    bottom: 16%;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 
@@ -2187,9 +2159,10 @@ footer h3 {
 
 /* PACÍFICO NORTE */
 .marcador-1 {
-    top: 29%;
-    left: 9%;
+    top: 32%;
+    left: 10%;
 }
+
 
 /* CARIBE */
 .marcador-2 {
@@ -2197,22 +2170,25 @@ footer h3 {
     left: 27%;
 }
 
+
 /* INDO-PACÍFICO */
 .marcador-3 {
     top: 55%;
-    left: 82%;
+    left: 83%;
 }
+
 
 /* ATLÂNTICO SUL */
 .marcador-4 {
-    top: 69%;
-    left: 46%;
+    top: 70%;
+    left: 44%;
 }
+
 
 /* PACÍFICO SUL */
 .marcador-5 {
     top: 72%;
-    left: 10%;
+    left: 9%;
 }
 
 
