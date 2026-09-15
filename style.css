@@ -1897,11 +1897,11 @@ footer h3 {
 
 }
 /* ==============================
-   PÁGINA MAPA OCEÂNICO
+   MAPA OCEÂNICO
 ================================ */
 
 .mapa-secao {
-    max-width: 1200px;
+    max-width: 1500px;
 
     margin: 0 auto 130px;
 
@@ -1909,117 +1909,205 @@ footer h3 {
 
     display: grid;
 
-    grid-template-columns: 1.4fr 0.6fr;
+    grid-template-columns:
+        minmax(0, 3fr)
+        minmax(300px, 1fr);
 
-    gap: 30px;
+    gap: 25px;
 
     align-items: stretch;
 }
 
 
-.mapa-container {
-    min-height: 520px;
+/* MAPA */
 
+.mapa-real {
     position: relative;
+
+    min-height: 650px;
 
     overflow: hidden;
 
     border-radius: 28px;
 
-    background:
-
-        radial-gradient(
-            circle at 20% 30%,
-            rgba(74, 170, 199, 0.20),
-            transparent 25%
-        ),
-
-        radial-gradient(
-            circle at 75% 55%,
-            rgba(116, 75, 190, 0.18),
-            transparent 30%
-        ),
-
-        linear-gradient(
-            145deg,
-            #0b3d59,
-            #08263f 45%,
-            #07152a
+    border:
+        1px solid rgba(
+            104,
+            195,
+            255,
+            0.35
         );
 
-    border:
-        1px solid rgba(111, 191, 235, 0.20);
+    background-image:
+
+        linear-gradient(
+            rgba(1, 28, 52, 0.18),
+            rgba(2, 9, 27, 0.28)
+        ),
+
+        url("https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Physical_World_Map.svg/1600px-Physical_World_Map.svg.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
 
     box-shadow:
-        inset 0 0 80px rgba(0, 0, 0, 0.25);
+        inset 0 0 100px rgba(0,0,0,0.36),
+        0 20px 60px rgba(0,0,0,0.30);
 }
 
 
-/* formas abstratas representando continentes */
-
-.mapa-container::before {
+.mapa-real::after {
     content: "";
 
     position: absolute;
 
-    inset: 50px;
+    inset: 0;
+
+    z-index: 1;
+
+    pointer-events: none;
 
     background:
-        radial-gradient(
-            ellipse at 25% 35%,
-            rgba(102, 137, 131, 0.45) 0 12%,
-            transparent 13%
-        ),
-
-        radial-gradient(
-            ellipse at 42% 65%,
-            rgba(102, 137, 131, 0.38) 0 8%,
-            transparent 9%
-        ),
-
-        radial-gradient(
-            ellipse at 66% 35%,
-            rgba(102, 137, 131, 0.42) 0 17%,
-            transparent 18%
-        ),
-
-        radial-gradient(
-            ellipse at 77% 68%,
-            rgba(102, 137, 131, 0.38) 0 8%,
-            transparent 9%
+        linear-gradient(
+            180deg,
+            rgba(0, 35, 66, 0.10),
+            rgba(3, 7, 28, 0.18)
         );
-
-    filter: blur(2px);
-
-    opacity: 0.75;
 }
 
 
-.oceano-texto {
+/* NOMES DOS CONTINENTES */
+
+.nome-mapa {
     position: absolute;
 
-    font-size: 11px;
+    z-index: 5;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    line-height: 1.25;
+
+    letter-spacing: 0.8px;
+
+    text-align: center;
+
+    text-shadow:
+        0 2px 5px rgba(0,0,0,1),
+        0 0 10px rgba(0,0,0,0.75);
+
+    pointer-events: none;
+}
+
+
+.america-norte {
+    top: 28%;
+    left: 16%;
+}
+
+
+.america-sul {
+    top: 57%;
+    left: 27%;
+}
+
+
+.europa {
+    top: 28%;
+    left: 51%;
+}
+
+
+.africa {
+    top: 48%;
+    left: 51%;
+}
+
+
+.asia {
+    top: 31%;
+    left: 72%;
+}
+
+
+.oceania {
+    top: 66%;
+    left: 81%;
+}
+
+
+.antartida {
+    bottom: 6%;
+    left: 51%;
+
+    transform:
+        translateX(-50%);
+}
+
+
+/* NOMES DOS OCEANOS */
+
+.nome-oceano {
+    position: absolute;
+
+    z-index: 5;
+
+    color: #62caff;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    line-height: 1.5;
 
     letter-spacing: 4px;
 
-    color: rgba(177, 217, 238, 0.35);
+    text-align: center;
 
-    z-index: 2;
+    text-shadow:
+        0 2px 6px rgba(0,0,0,1),
+        0 0 14px rgba(0,0,0,0.9);
+
+    pointer-events: none;
 }
 
-.oceano-pacifico {
+
+.pacifico-esquerda {
+    top: 49%;
+    left: 4%;
+}
+
+
+.atlantico {
     top: 43%;
-    left: 11%;
+    left: 35%;
 }
 
-.oceano-atlantico {
+
+.indico {
+    top: 61%;
+    left: 64%;
+}
+
+
+.pacifico-direita {
     top: 48%;
-    left: 46%;
+    right: 3%;
 }
 
-.oceano-indico {
-    top: 57%;
-    right: 14%;
+
+.oceanosul {
+    bottom: 16%;
+    left: 50%;
+
+    transform:
+        translateX(-50%);
 }
 
 
@@ -2030,91 +2118,164 @@ footer h3 {
 
     z-index: 10;
 
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
 
     border-radius: 50%;
 
     border:
-        1px solid rgba(255, 255, 255, 0.45);
+        1px solid rgba(
+            255,
+            255,
+            255,
+            0.85
+        );
 
     background:
         linear-gradient(
             145deg,
-            #b06ee0,
-            #675ddc
+            #aa68ea,
+            #645ce7
         );
 
     color: white;
 
-    font-size: 18px;
+    font-size: 19px;
 
     cursor: pointer;
 
     box-shadow:
-        0 0 25px rgba(151, 96, 229, 0.75);
+        0 0 18px
+        rgba(147, 91, 255, 0.85),
 
-    transition: 0.3s;
+        0 0 40px
+        rgba(81, 190, 255, 0.32);
 
-    animation:
-        marcadorPulso 2.5s ease-in-out infinite;
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s,
+        background 0.3s;
 }
 
+
 .marcador:hover {
-    transform: scale(1.2);
+    transform: scale(1.18);
+
+    box-shadow:
+        0 0 28px
+        rgba(151, 95, 255, 1),
+
+        0 0 55px
+        rgba(95, 201, 255, 0.55);
+}
+
+
+.marcador.selecionado {
+    transform: scale(1.22);
 
     background:
         linear-gradient(
             145deg,
-            #ce88ee,
-            #7869ef
+            #77e1ff,
+            #9868ff
         );
+
+    box-shadow:
+        0 0 40px
+        rgba(105, 218, 255, 0.95);
 }
 
 
-@keyframes marcadorPulso {
-
-    0%,
-    100% {
-        box-shadow:
-            0 0 15px rgba(151, 96, 229, 0.5);
-    }
-
-    50% {
-        box-shadow:
-            0 0 35px rgba(119, 204, 255, 0.75);
-    }
-
-}
-
+/* POSIÇÕES DOS MARCADORES */
 
 .marcador-1 {
-    top: 28%;
-    left: 17%;
+    top: 27%;
+    left: 9%;
 }
+
 
 .marcador-2 {
-    top: 46%;
-    left: 35%;
+    top: 45%;
+    left: 23%;
 }
+
 
 .marcador-3 {
-    top: 55%;
-    right: 17%;
+    top: 54%;
+    left: 76%;
 }
+
 
 .marcador-4 {
-    bottom: 25%;
-    left: 45%;
+    top: 73%;
+    left: 34%;
 }
+
 
 .marcador-5 {
-    bottom: 20%;
-    left: 16%;
+    top: 74%;
+    left: 8%;
 }
 
 
-/* PAINEL */
+/* LEGENDA */
+
+.legenda-mapa {
+    position: absolute;
+
+    z-index: 10;
+
+    left: 20px;
+    bottom: 20px;
+
+    padding: 16px 20px;
+
+    border-radius: 14px;
+
+    color: #aac2d5;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+    background:
+        rgba(3, 22, 43, 0.88);
+
+    border:
+        1px solid
+        rgba(107, 198, 255, 0.25);
+
+    backdrop-filter: blur(12px);
+}
+
+
+.mini-estrela {
+    display: inline-flex;
+
+    width: 24px;
+    height: 24px;
+
+    margin-right: 8px;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: white;
+
+    background: #9664e8;
+}
+
+
+/* PAINEL LATERAL */
 
 .mapa-painel {
     padding: 42px;
@@ -2123,29 +2284,40 @@ footer h3 {
 
     background:
         linear-gradient(
-            145deg,
-            rgba(17, 67, 92, 0.58),
-            rgba(22, 15, 52, 0.82)
+            160deg,
+            rgba(19, 58, 89, 0.92),
+            rgba(29, 15, 63, 0.94)
         );
 
     border:
-        1px solid rgba(119, 190, 235, 0.17);
+        1px solid
+        rgba(111, 192, 235, 0.22);
+
+    box-shadow:
+        0 20px 60px
+        rgba(0,0,0,0.30);
 }
 
 
 .mapa-painel h2 {
-    font-family: "Playfair Display", serif;
+    font-family:
+        "Playfair Display",
+        serif;
 
-    font-size: 34px;
+    font-size: 40px;
 
-    margin-bottom: 20px;
+    line-height: 1.2;
+
+    margin-bottom: 22px;
 }
 
 
 .mapa-painel > p:not(.categoria) {
-    color: #8ca4b8;
+    color: #8da9bd;
 
     line-height: 1.8;
+
+    font-size: 15px;
 }
 
 
@@ -2159,41 +2331,48 @@ footer h3 {
 
 
 .mapa-info div {
-    padding: 17px;
+    min-height: 95px;
 
-    border-radius: 14px;
+    padding: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    border-radius: 16px;
 
     background:
-        rgba(86, 85, 166, 0.10);
+        rgba(70, 65, 130, 0.15);
 
     border:
-        1px solid rgba(166, 118, 230, 0.12);
+        1px solid
+        rgba(166, 119, 229, 0.17);
 }
 
 
 .mapa-info strong {
-    display: block;
+    margin-bottom: 8px;
 
-    margin-bottom: 5px;
-
-    color: #ba91ff;
+    color: #bd87ff;
 
     font-size: 11px;
-
-    text-transform: uppercase;
 
     letter-spacing: 1px;
 }
 
 
 .mapa-info span {
-    color: #a2b7c8;
+    color: #b6c8d7;
 
     font-size: 14px;
 }
 
 
-/* REGIÕES */
+/* ==============================
+   CARDS DOS OCEANOS
+================================ */
 
 .regioes-oceanicas {
     max-width: 1150px;
@@ -2207,11 +2386,15 @@ footer h3 {
 
 
 .regioes-oceanicas > h2 {
-    font-family: "Playfair Display", serif;
+    margin-bottom: 55px;
+
+    font-family:
+        "Playfair Display",
+        serif;
 
     font-size: 45px;
 
-    margin-bottom: 55px;
+    font-weight: 500;
 }
 
 
@@ -2235,12 +2418,13 @@ footer h3 {
     background:
         linear-gradient(
             145deg,
-            rgba(13, 63, 89, 0.5),
+            rgba(13, 63, 89, 0.50),
             rgba(18, 15, 46, 0.76)
         );
 
     border:
-        1px solid rgba(112, 191, 235, 0.15);
+        1px solid
+        rgba(112, 191, 235, 0.15);
 }
 
 
@@ -2254,11 +2438,13 @@ footer h3 {
 
 
 .regiao-card h3 {
-    font-family: "Playfair Display", serif;
+    margin-bottom: 15px;
+
+    font-family:
+        "Playfair Display",
+        serif;
 
     font-size: 24px;
-
-    margin-bottom: 15px;
 }
 
 
@@ -2271,103 +2457,57 @@ footer h3 {
 }
 
 
-@media (max-width: 900px) {
+/* RESPONSIVO */
+
+@media (max-width: 1050px) {
 
     .mapa-secao {
         grid-template-columns: 1fr;
     }
 
+    .mapa-real {
+        min-height: 560px;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .mapa-real {
+        min-height: 430px;
+    }
+
+
+    .nome-mapa {
+        font-size: 8px;
+    }
+
+
+    .nome-oceano {
+        font-size: 8px;
+
+        letter-spacing: 1px;
+    }
+
+
+    .marcador {
+        width: 34px;
+        height: 34px;
+
+        font-size: 12px;
+    }
+
+
+    .legenda-mapa {
+        font-size: 9px;
+
+        padding: 10px;
+    }
+
+
     .regioes-grid {
         grid-template-columns: 1fr;
     }
 
-}
-.marcador.selecionado {
-    transform: scale(1.25);
-
-    background:
-        linear-gradient(
-            145deg,
-            #73dcff,
-            #9868ee
-        );
-
-    box-shadow:
-        0 0 40px rgba(112, 215, 255, 0.9);
-}
-/* ==============================
-   NOMES DOS CONTINENTES
-================================ */
-
-.continente {
-    position: absolute;
-
-    z-index: 3;
-
-    font-size: 11px;
-
-    font-weight: 600;
-
-    color: rgba(230, 244, 250, 0.75);
-
-    text-shadow:
-        0 1px 5px rgba(0, 0, 0, 0.8);
-
-    pointer-events: none;
-}
-
-
-/* AMÉRICA DO NORTE */
-
-.continente-america-norte {
-    top: 25%;
-    left: 22%;
-}
-
-
-/* AMÉRICA DO SUL */
-
-.continente-america-sul {
-    top: 58%;
-    left: 34%;
-}
-
-
-/* EUROPA */
-
-.continente-europa {
-    top: 27%;
-    left: 51%;
-}
-
-
-/* ÁFRICA */
-
-.continente-africa {
-    top: 47%;
-    left: 53%;
-}
-
-
-/* ÁSIA */
-
-.continente-asia {
-    top: 29%;
-    left: 69%;
-}
-
-
-/* OCEANIA */
-
-.continente-oceania {
-    top: 67%;
-    left: 78%;
-}
-
-
-/* ANTÁRTIDA */
-
-.continente-antartida {
-    bottom: 7%;
-    left: 48%;
 }
