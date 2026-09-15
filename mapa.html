@@ -36,6 +36,8 @@
 
 <main>
 
+    <!-- TOPO DA PÁGINA -->
+
     <section class="pagina-topo">
 
         <p class="categoria">
@@ -48,90 +50,135 @@
 
         <p>
             Explore diferentes regiões do planeta e descubra
-            algumas estrelas-do-mar associadas a esses ambientes.
+            espécies de estrelas-do-mar associadas a cada ambiente.
         </p>
 
     </section>
 
 
+    <!-- MAPA -->
+
     <section class="mapa-secao">
 
-        <div class="mapa-container">
+        <div class="mapa-real">
 
-            <div class="oceano-texto oceano-pacifico">
-                PACÍFICO
-            </div>
 
-            <div class="oceano-texto oceano-atlantico">
-                ATLÂNTICO
-            </div>
+            <!-- NOMES DOS CONTINENTES -->
 
-            <div class="oceano-texto oceano-indico">
-                ÍNDICO
-            </div>
-            
-<div class="continente continente-america-norte">
-    América do Norte
-</div>
+            <span class="nome-mapa america-norte">
+                AMÉRICA<br>DO NORTE
+            </span>
 
-<div class="continente continente-america-sul">
-    América do Sul
-</div>
+            <span class="nome-mapa america-sul">
+                AMÉRICA<br>DO SUL
+            </span>
 
-<div class="continente continente-europa">
-    Europa
-</div>
+            <span class="nome-mapa europa">
+                EUROPA
+            </span>
 
-<div class="continente continente-africa">
-    África
-</div>
+            <span class="nome-mapa africa">
+                ÁFRICA
+            </span>
 
-<div class="continente continente-asia">
-    Ásia
-</div>
+            <span class="nome-mapa asia">
+                ÁSIA
+            </span>
 
-<div class="continente continente-oceania">
-    Oceania
-</div>
+            <span class="nome-mapa oceania">
+                OCEANIA
+            </span>
 
-<div class="continente continente-antartida">
-    Antártida
-</div>
+            <span class="nome-mapa antartida">
+                ANTÁRTIDA
+            </span>
+
+
+            <!-- NOMES DOS OCEANOS -->
+
+            <span class="nome-oceano pacifico-esquerda">
+                OCEANO<br>PACÍFICO
+            </span>
+
+            <span class="nome-oceano atlantico">
+                OCEANO<br>ATLÂNTICO
+            </span>
+
+            <span class="nome-oceano indico">
+                OCEANO<br>ÍNDICO
+            </span>
+
+            <span class="nome-oceano pacifico-direita">
+                OCEANO<br>PACÍFICO
+            </span>
+
+            <span class="nome-oceano oceanosul">
+                OCEANO AUSTRAL
+            </span>
+
+
+            <!-- PONTOS INTERATIVOS -->
 
             <button
                 class="marcador marcador-1"
-                data-regiao="pacifico-norte">
+                data-regiao="pacifico-norte"
+                aria-label="Pacífico Norte">
                 ★
             </button>
 
             <button
                 class="marcador marcador-2"
-                data-regiao="caribe">
+                data-regiao="caribe"
+                aria-label="Caribe">
                 ★
             </button>
 
             <button
                 class="marcador marcador-3"
-                data-regiao="indopacifico">
+                data-regiao="indopacifico"
+                aria-label="Indo-Pacífico">
                 ★
             </button>
 
             <button
                 class="marcador marcador-4"
-                data-regiao="atlantico-sul">
+                data-regiao="atlantico-sul"
+                aria-label="Atlântico Sul">
                 ★
             </button>
 
             <button
                 class="marcador marcador-5"
-                data-regiao="pacifico-sul">
+                data-regiao="pacifico-sul"
+                aria-label="Pacífico Sul">
                 ★
             </button>
+
+
+            <!-- LEGENDA -->
+
+            <div class="legenda-mapa">
+
+                <div>
+                    <span class="mini-estrela">
+                        ★
+                    </span>
+
+                    Pontos de exploração
+                </div>
+
+                <div>
+                    Clique nas estrelas para explorar
+                </div>
+
+            </div>
 
         </div>
 
 
-        <div class="mapa-painel">
+        <!-- PAINEL LATERAL -->
+
+        <aside class="mapa-painel">
 
             <p class="categoria">
                 REGIÃO SELECIONADA
@@ -142,33 +189,60 @@
             </h2>
 
             <p id="mapaDescricao">
-                Clique em uma das estrelas do mapa para descobrir
-                informações sobre aquela região.
+                Clique em uma das estrelas do mapa para
+                descobrir informações sobre a região,
+                suas espécies e seus habitats.
             </p>
+
 
             <div class="mapa-info">
 
                 <div>
-                    <strong>Espécie</strong>
-                    <span id="mapaEspecie">—</span>
+
+                    <strong>
+                        ESPÉCIE
+                    </strong>
+
+                    <span id="mapaEspecie">
+                        —
+                    </span>
+
                 </div>
 
-                <div>
-                    <strong>Habitat</strong>
-                    <span id="mapaHabitat">—</span>
-                </div>
 
                 <div>
-                    <strong>Região</strong>
-                    <span id="mapaRegiao">—</span>
+
+                    <strong>
+                        HABITAT
+                    </strong>
+
+                    <span id="mapaHabitat">
+                        —
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        REGIÃO
+                    </strong>
+
+                    <span id="mapaRegiao">
+                        —
+                    </span>
+
                 </div>
 
             </div>
 
-        </div>
+        </aside>
 
     </section>
 
+
+    <!-- REGIÕES -->
 
     <section class="regioes-oceanicas">
 
@@ -180,17 +254,23 @@
             Estrelas-do-mar ao redor do mundo
         </h2>
 
+
         <div class="regioes-grid">
 
             <article class="regiao-card">
 
-                <span>🌊</span>
+                <span>
+                    🌊
+                </span>
 
-                <h3>Oceano Pacífico</h3>
+                <h3>
+                    Oceano Pacífico
+                </h3>
 
                 <p>
-                    Abriga uma enorme variedade de ambientes marinhos,
-                    desde águas tropicais até regiões frias do norte.
+                    O maior oceano do planeta abriga ambientes
+                    tropicais, temperados, polares e profundas
+                    regiões oceânicas.
                 </p>
 
             </article>
@@ -198,13 +278,17 @@
 
             <article class="regiao-card">
 
-                <span>🌎</span>
+                <span>
+                    🌎
+                </span>
 
-                <h3>Oceano Atlântico</h3>
+                <h3>
+                    Oceano Atlântico
+                </h3>
 
                 <p>
-                    Possui habitats costeiros, recifes, fundos arenosos
-                    e regiões profundas com grande diversidade.
+                    Reúne costas rochosas, fundos arenosos,
+                    águas tropicais e ambientes profundos.
                 </p>
 
             </article>
@@ -212,13 +296,17 @@
 
             <article class="regiao-card">
 
-                <span>≋</span>
+                <span>
+                    ≋
+                </span>
 
-                <h3>Oceano Índico</h3>
+                <h3>
+                    Oceano Índico
+                </h3>
 
                 <p>
-                    Região associada a recifes tropicais e a diferentes
-                    espécies de estrelas-do-mar.
+                    Possui extensas regiões tropicais e recifes
+                    com grande biodiversidade marinha.
                 </p>
 
             </article>
@@ -227,6 +315,8 @@
 
     </section>
 
+
+    <!-- DESTAQUE -->
 
     <section class="destaque">
 
@@ -241,12 +331,14 @@
             </h2>
 
             <p>
-                As estrelas-do-mar são animais exclusivamente marinhos
-                e podem ser encontradas desde águas costeiras rasas
-                até ambientes profundos.
+                As estrelas-do-mar são animais exclusivamente marinhos.
+                Elas podem viver em águas rasas próximas à costa,
+                em recifes, fundos arenosos, regiões rochosas
+                e até em ambientes oceânicos profundos.
             </p>
 
         </div>
+
 
         <div class="estrela-grande">
             ★
@@ -260,13 +352,22 @@
 <footer>
 
     <div>
-        <h3>✦ ASTERA</h3>
-        <p>Explorador de Estrelas-do-Mar</p>
+
+        <h3>
+            ✦ ASTERA
+        </h3>
+
+        <p>
+            Explorador de Estrelas-do-Mar
+        </p>
+
     </div>
+
 
     <p>
         Explorando a vida marinha ao redor do planeta.
     </p>
+
 
     <p>
         Criado por Stephany Gonçalves da Silva
@@ -278,4 +379,5 @@
 <script src="script.js"></script>
 
 </body>
+
 </html>
