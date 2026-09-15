@@ -2075,35 +2075,29 @@ background-repeat: no-repeat;
 
 
 .pacifico-esquerda {
-    top: 49%;
+    top: 50%;
     left: 4%;
 }
 
-
 .atlantico {
-    top: 43%;
-    left: 35%;
+    top: 45%;
+    left: 37%;
 }
-
 
 .indico {
     top: 61%;
-    left: 64%;
+    left: 65%;
 }
-
 
 .pacifico-direita {
-    top: 48%;
+    top: 50%;
     right: 3%;
 }
-
 
 .oceanosul {
     bottom: 16%;
     left: 50%;
-
-    transform:
-        translateX(-50%);
+    transform: translateX(-50%);
 }
 
 
@@ -2189,35 +2183,34 @@ background-repeat: no-repeat;
 }
 
 
-/* POSIÇÕES DOS MARCADORES */
-
+/* PACÍFICO NORTE */
 .marcador-1 {
-    top: 27%;
+    top: 29%;
     left: 9%;
 }
 
-
+/* CARIBE */
 .marcador-2 {
-    top: 45%;
-    left: 23%;
+    top: 44%;
+    left: 27%;
 }
 
-
+/* INDO-PACÍFICO */
 .marcador-3 {
-    top: 54%;
-    left: 76%;
+    top: 55%;
+    left: 82%;
 }
 
-
+/* ATLÂNTICO SUL */
 .marcador-4 {
-    top: 73%;
-    left: 34%;
+    top: 69%;
+    left: 46%;
 }
 
-
+/* PACÍFICO SUL */
 .marcador-5 {
-    top: 74%;
-    left: 8%;
+    top: 72%;
+    left: 10%;
 }
 
 
